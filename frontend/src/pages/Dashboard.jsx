@@ -26,10 +26,13 @@ function Dashboard() {
 
     dispatch(getGoals())
 
-    //when amount return to useEffect 
+    //when amount return to useEffect
+    //but this will cause some issue when navigating
+    /*
     return () => {
       dispatch(reset())
     }
+    */
   }, [user ,navigate, isError, message, dispatch])
 
   if(isLoading){
